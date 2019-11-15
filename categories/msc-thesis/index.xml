@@ -2,30 +2,136 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MSc Thesis | Hanne Oberman</title>
-    <link>/categories/msc-thesis/</link>
-      <atom:link href="/categories/msc-thesis/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://hanneoberman.github.io/categories/msc-thesis/</link>
+      <atom:link href="https://hanneoberman.github.io/categories/msc-thesis/index.xml" rel="self" type="application/rss+xml" />
     <description>MSc Thesis</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://hanneoberman.github.io/img/icon-192.png</url>
       <title>MSc Thesis</title>
-      <link>/categories/msc-thesis/</link>
+      <link>https://hanneoberman.github.io/categories/msc-thesis/</link>
     </image>
     
     <item>
       <title>Convergence Diagnostic for Multiple Imputation</title>
-      <link>/post/convergence-diagnostic-for-multiple-imputation/</link>
+      <link>https://hanneoberman.github.io/post/convergence-diagnostic-for-multiple-imputation/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/post/convergence-diagnostic-for-multiple-imputation/</guid>
+      <guid>https://hanneoberman.github.io/post/convergence-diagnostic-for-multiple-imputation/</guid>
       <description>
 
-&lt;div id=&#34;TOC&#34;&gt;
-yes
-&lt;/div&gt;
 
 &lt;p&gt;This file describes how convergence diagnostic &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; is computed in the simulation study I ran for my Research Report. &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; is also called ‘potential scale reduction factor’. It tells us how much the variance of an estimate could be shrunken down if we would have infinitely many iterations.&lt;/p&gt;
 &lt;div id=&#34;step-1-impute-some-data&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Step 1: Impute some data&lt;/h1&gt;
+&lt;p&gt;It’s easiest to show how &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; is computed by applying it on a simple example. Load the nhanes data and impute the variables with missingness.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# load required packages/functions
+library(magrittr)
+library(mice)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: lattice&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Attaching package: &amp;#39;mice&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## The following objects are masked from &amp;#39;package:base&amp;#39;:
+## 
+##     cbind, rbind&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;source(&amp;quot;C:/Users/User/Desktop/shinyMice/Simulation/Functions/Convergence.R&amp;quot;)
+source(&amp;quot;C:/Users/User/Desktop/shinyMice/Simulation/Functions/Convergence_supplement.R&amp;quot;)
+
+# set parameters
+maxit &amp;lt;- 10
+n.var &amp;lt;- 3 
+
+# run imputation
+imp &amp;lt;- mice(nhanes[,-1], maxit = maxit, print = F)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-2-evaluate-the-functions-to-use&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Step 2: Evaluate the functions to use&lt;/h1&gt;
+&lt;p&gt;We are going to compute &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; values per imputed variable. As recommended by Vehtari et al. (2019), we compute split-half, rank-normalized &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; values for the bulk and the tails of the distribution. For the latter, we need to fold the imputation chains before splitting them in half and rank-normalizing them. Then, &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; is computed for both (bulk and tails). The highest of these two &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; values is extracted. This is performed for each of the imputed variables, and only the maximum &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; value across variables is reported.&lt;/p&gt;
+&lt;p&gt;The rhat_function function is the wrapper that performs all of this. Within the function, we call 4 other functions (explaination below): fold_sims(), split_chains(), z_scale(), and get.rhat().&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# show the contents of the function
+rhat_function&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## function (imp, maxit, n.var = 4) 
+## {
+##     rhat &amp;lt;- matrix(NA, nrow = 1, ncol = n.var)
+##     for (v in 1:n.var) {
+##         rhat_bulk &amp;lt;- imp$chainMean[v, , ] %&amp;gt;% split_chains() %&amp;gt;% 
+##             z_scale() %&amp;gt;% get.rhat(maxit = maxit)
+##         rhat_tail &amp;lt;- imp$chainMean[v, , ] %&amp;gt;% fold_sims() %&amp;gt;% 
+##             split_chains() %&amp;gt;% z_scale() %&amp;gt;% get.rhat(maxit = maxit)
+##         rhat[v] &amp;lt;- max(rhat_bulk, rhat_tail)
+##     }
+##     max(rhat)
+## }&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The first function inside rhat_function is split_chains(). This ‘chops’ the chains in two, to assess trending within chains.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# show the contents of the function
+split_chains&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## function (sims) 
+## {
+##     niter &amp;lt;- dim(sims)[1]
+##     if (niter &amp;lt; 4) 
+##         return(sims)
+##     half &amp;lt;- niter/2
+##     cbind(sims[1:floor(half), ], sims[ceiling(half + 1):niter, 
+##         ])
+## }&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then the halved chains are rank-normalized.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# show the contents of the function
+z_scale&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## function (x) 
+## {
+##     S &amp;lt;- length(x)
+##     r &amp;lt;- rank(x, ties.method = &amp;quot;average&amp;quot;)
+##     z &amp;lt;- qnorm((r - 1/2)/S)
+##     if (!is.null(dim(x))) {
+##         z &amp;lt;- array(z, dim = dim(x), dimnames = dimnames(x))
+##     }
+##     z
+## }&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To detect non-convergence in the tails, &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; is also computed on the folded chains (which are also split and rank-normalized).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# show the contents of the function
+fold_sims&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## function (sims) 
+## {
+##     abs(sims - median(sims))
+## }&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Only then do we get to the actual &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; function. In the get.rhat function, the following equations are applied:&lt;/p&gt;
+&lt;p&gt;&#34;In the equations below, &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; is the number of draws per chain, &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is the number of chains, and &lt;span class=&#34;math inline&#34;&gt;\(S = MN\)&lt;/span&gt; is the total number of draws from all chains. For each scalar summary of interest &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;, we compute &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(W\)&lt;/span&gt;, the between- and within-chain variances:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align*}
+B =\frac{N}{M-1} \sum_{m=1}^{M}\left(\bar{\theta}^{(\cdot m)}-\bar{\theta}^{(\cdot \cdot)}\right)^{2}, 
+\text { where } \bar{\theta}^{(\cdot m)}=\frac{1}{N} \sum_{n=1}^{N} \theta^{(n m)}, 
+\text { and } \bar{\theta}^{(\cdot \cdot)}=\frac{1}{M} \sum_{m=1}^{M} \bar{\theta}^{(\cdot m)} \\
+W =\frac{1}{M} \sum_{m=1}^{M} s_{j}^{2}, 
+\text { where } s_{m}^{2}=\frac{1}{N-1} \sum_{n=1}^{N}\left(\theta^{(n m)}-\bar{\theta}^{(\cdot m)}\right)^{2}&amp;quot;. 
+\text{ Vehtari et al., 2019, p. 5} 
+\end{align*}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The between and within chain variances are computed from the chain means of the mids object, that underwent the previous transformations (folding, splitting, rank-normalizing). The average of the chain means per imputation &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(\bar{\theta}^{(\cdot m)}\)&lt;/span&gt;. The average of these &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; values is &lt;span class=&#34;math inline&#34;&gt;\(\bar{\theta}^{(\cdot \cdot)}\)&lt;/span&gt;. &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; is the number of iterations (‘maxit’). So we compute &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; as &lt;code&gt;maxit * var(apply(sims, 2, mean))&lt;/code&gt;. And &lt;span class=&#34;math inline&#34;&gt;\(W\)&lt;/span&gt; is computed as &lt;code&gt;mean(apply(sims, 2, var))&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;To get &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; we need to compute the weighted average of &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(W\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(\widehat{\operatorname{var}}^{+}\)&lt;/span&gt;, and evaluate this against the within chain variance W. The weighted average is is computed as follows:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{equation*}
+\widehat{\operatorname{var}}^{+}(\theta | y)=\frac{N-1}{N} W+\frac{1}{N} B,
+\end{equation*}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Then finally, potential scale reduction factor &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; is obtained as:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{equation*}
+\widehat{R}=\sqrt{\frac{\widehat{\operatorname{var}}^{+}(\theta | y)}{W}}.
+\end{equation*}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; is computed for each variable with the function ‘get.rhat()’.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# show the contents of the function
+get.rhat&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## function (sims, maxit = maxit) 
+## {
+##     var_between &amp;lt;- maxit * var(apply(sims, 2, mean))
+##     var_within &amp;lt;- mean(apply(sims, 2, var))
+##     rhat &amp;lt;- sqrt((var_between/var_within + maxit - 1)/maxit)
+##     return(rhat)
+## }&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-3-apply-these-functions-to-get-widehatr-values&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Step 3: Apply these functions to get &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; values&lt;/h1&gt;
+&lt;p&gt;Now we know what’s happening, let’s apply it.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rhat_function(imp, maxit, n.var = n.var)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1.065883&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; value is nice and high, but I also got values below one. Which is theoretically impossible.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;so-my-question-to-you-is-how-is-it-possible-that-we-can-obtain-widehatr-values-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;So my question to you is: How is it possible that we can obtain &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; values &amp;lt; 1?&lt;/h1&gt;
 &lt;/div&gt;
 </description>
     </item>
