@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors | Hanne Oberman</title>
-    <link>https://hanneoberman.github.io/authors/</link>
-      <atom:link href="https://hanneoberman.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/</link>
+      <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
     <image>
-      <url>https://hanneoberman.github.io/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Authors</title>
-      <link>https://hanneoberman.github.io/authors/</link>
+      <link>/authors/</link>
     </image>
     
     <item>
       <title></title>
-      <link>https://hanneoberman.github.io/authors/admin/</link>
+      <link>/authors/admin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hanneoberman.github.io/authors/admin/</guid>
+      <guid>/authors/admin/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Warning: This website is still under construction.&lt;/strong&gt; Hi, my name is Hanne Oberman. I&amp;rsquo;m a research master&amp;rsquo;s student Methodology and Statistics for the Behavioural, Biomedical and Social Sciences at Utrecht University. I expect to graduate May 2020.&lt;/p&gt;
 </description>
     </item>
