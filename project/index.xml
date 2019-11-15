@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Hanne Oberman</title>
+    <link>https://hanneoberman.github.io/project/</link>
+      <atom:link href="https://hanneoberman.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://hanneoberman.github.io/img/icon-192.png</url>
+      <title>Projects</title>
+      <link>https://hanneoberman.github.io/project/</link>
+    </image>
+    
+    <item>
+      <title>MLaRP</title>
+      <link>https://hanneoberman.github.io/project/internal-project/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://hanneoberman.github.io/project/internal-project/</guid>
+      <description>&lt;p&gt;This project page is dedicated to the course &amp;lsquo;Mark-up Languages and Reproducible Programming&amp;rsquo; (UU).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ShinyMICE</title>
+      <link>https://hanneoberman.github.io/project/external-project/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://hanneoberman.github.io/project/external-project/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

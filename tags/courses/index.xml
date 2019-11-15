@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Courses | Hanne Oberman</title>
+    <link>/tags/courses/</link>
+      <atom:link href="/tags/courses/index.xml" rel="self" type="application/rss+xml" />
+    <description>Courses</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Courses</title>
+      <link>/tags/courses/</link>
+    </image>
+    
+    <item>
+      <title>MLaRP</title>
+      <link>/project/internal-project/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/internal-project/</guid>
+      <description>&lt;p&gt;This project page is dedicated to the course &amp;lsquo;Mark-up Languages and Reproducible Programming&amp;rsquo; (UU).&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

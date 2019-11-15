@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ShinyMICE | Hanne Oberman</title>
-    <link>/tags/shinymice/</link>
-      <atom:link href="/tags/shinymice/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://hanneoberman.github.io/tags/shinymice/</link>
+      <atom:link href="https://hanneoberman.github.io/tags/shinymice/index.xml" rel="self" type="application/rss+xml" />
     <description>ShinyMICE</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://hanneoberman.github.io/img/icon-192.png</url>
       <title>ShinyMICE</title>
-      <link>/tags/shinymice/</link>
+      <link>https://hanneoberman.github.io/tags/shinymice/</link>
     </image>
     
     <item>
       <title>Convergence Diagnostic for Multiple Imputation</title>
-      <link>/post/convergence-diagnostic-for-multiple-imputation/</link>
+      <link>https://hanneoberman.github.io/post/convergence-diagnostic-for-multiple-imputation/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/post/convergence-diagnostic-for-multiple-imputation/</guid>
+      <guid>https://hanneoberman.github.io/post/convergence-diagnostic-for-multiple-imputation/</guid>
       <description>
 
 
@@ -127,13 +127,21 @@ get.rhat&lt;/code&gt;&lt;/pre&gt;
 &lt;h1&gt;Step 3: Apply these functions to get &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; values&lt;/h1&gt;
 &lt;p&gt;Now we know what’s happening, let’s apply it.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rhat_function(imp, maxit, n.var = n.var)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 1.151591&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1.068033&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; value is nice and high, but I also got values below one. Which is theoretically impossible.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;so-my-question-to-you-is-how-is-it-possible-that-we-can-obtain-widehatr-values-1&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;So my question to you is: How is it possible that we can obtain &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; values &amp;lt; 1?&lt;/h1&gt;
 &lt;/div&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>ShinyMICE</title>
+      <link>https://hanneoberman.github.io/project/external-project/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://hanneoberman.github.io/project/external-project/</guid>
+      <description></description>
     </item>
     
   </channel>

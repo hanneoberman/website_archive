@@ -2,21 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories | Hanne Oberman</title>
-    <link>/categories/</link>
-      <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://hanneoberman.github.io/categories/</link>
+      <atom:link href="https://hanneoberman.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://hanneoberman.github.io/img/icon-192.png</url>
       <title>Categories</title>
-      <link>/categories/</link>
+      <link>https://hanneoberman.github.io/categories/</link>
     </image>
     
     <item>
-      <title>MSc Thesis</title>
-      <link>/categories/msc-thesis/</link>
+      <title>Courses</title>
+      <link>https://hanneoberman.github.io/categories/courses/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/categories/msc-thesis/</guid>
+      <guid>https://hanneoberman.github.io/categories/courses/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MSc Thesis</title>
+      <link>https://hanneoberman.github.io/categories/msc-thesis/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://hanneoberman.github.io/categories/msc-thesis/</guid>
       <description></description>
     </item>
     

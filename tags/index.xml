@@ -2,37 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags | Hanne Oberman</title>
-    <link>/tags/</link>
-      <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://hanneoberman.github.io/tags/</link>
+      <atom:link href="https://hanneoberman.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://hanneoberman.github.io/img/icon-192.png</url>
       <title>Tags</title>
-      <link>/tags/</link>
+      <link>https://hanneoberman.github.io/tags/</link>
     </image>
     
     <item>
       <title>Convergence</title>
-      <link>/tags/convergence/</link>
+      <link>https://hanneoberman.github.io/tags/convergence/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/tags/convergence/</guid>
+      <guid>https://hanneoberman.github.io/tags/convergence/</guid>
       <description></description>
     </item>
     
     <item>
       <title>MICE</title>
-      <link>/tags/mice/</link>
+      <link>https://hanneoberman.github.io/tags/mice/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/tags/mice/</guid>
+      <guid>https://hanneoberman.github.io/tags/mice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MLaRP</title>
+      <link>https://hanneoberman.github.io/tags/mlarp/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://hanneoberman.github.io/tags/mlarp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ShinyMICE</title>
-      <link>/tags/shinymice/</link>
+      <link>https://hanneoberman.github.io/tags/shinymice/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/tags/shinymice/</guid>
+      <guid>https://hanneoberman.github.io/tags/shinymice/</guid>
       <description></description>
     </item>
     
