@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts | Hanne Oberman</title>
-    <link>/post/</link>
-      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    <description>Posts</description>
+    <title>MICE | Hanne Oberman</title>
+    <link>/tags/mice/</link>
+      <atom:link href="/tags/mice/index.xml" rel="self" type="application/rss+xml" />
+    <description>MICE</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
-      <title>Posts</title>
-      <link>/post/</link>
+      <title>MICE</title>
+      <link>/tags/mice/</link>
     </image>
     
     <item>

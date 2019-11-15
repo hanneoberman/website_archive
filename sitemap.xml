@@ -3,39 +3,68 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://hanneoberman.github.io/authors/admin/</loc>
+    <loc>/post/convergence-diagnostic-for-multiple-imputation/</loc>
+    <lastmod>2019-11-15T16:01:41+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hanneoberman.github.io/authors/</loc>
+    <loc>/categories/</loc>
+    <lastmod>2019-11-15T16:01:41+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hanneoberman.github.io/categories/</loc>
+    <loc>/tags/convergence/</loc>
+    <lastmod>2019-11-15T16:01:41+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hanneoberman.github.io/</loc>
+    <loc>/</loc>
+    <lastmod>2019-11-15T16:01:41+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hanneoberman.github.io/post/</loc>
+    <loc>/tags/mice/</loc>
+    <lastmod>2019-11-15T16:01:41+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hanneoberman.github.io/publication_types/</loc>
+    <loc>/categories/msc-thesis/</loc>
+    <lastmod>2019-11-15T16:01:41+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hanneoberman.github.io/publication/</loc>
+    <loc>/post/</loc>
+    <lastmod>2019-11-15T16:01:41+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hanneoberman.github.io/talk/</loc>
+    <loc>/tags/shinymice/</loc>
+    <lastmod>2019-11-15T16:01:41+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hanneoberman.github.io/tags/</loc>
+    <loc>/tags/</loc>
+    <lastmod>2019-11-15T16:01:41+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/admin/</loc>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+  </url>
+  
+  <url>
+    <loc>/talk/</loc>
   </url>
   
 </urlset>
