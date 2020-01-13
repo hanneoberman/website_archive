@@ -2,8 +2,8 @@
   "name": "Hanne Oberman",
   "short_name": "Hanne Oberman",
   "lang": "en-us",
-  "theme_color": "#2962ff",
-  "background_color": "#2962ff",
+  "theme_color": "#417A84",
+  "background_color": "#417A84",
   "icons": [{
     "src": "../img/icon-192.png",
     "sizes": "192x192",

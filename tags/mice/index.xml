@@ -2,21 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MICE | Hanne Oberman</title>
-    <link>https://hanneoberman.github.io/tags/mice/</link>
-      <atom:link href="https://hanneoberman.github.io/tags/mice/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/mice/</link>
+      <atom:link href="/tags/mice/index.xml" rel="self" type="application/rss+xml" />
     <description>MICE</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 13 Jan 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://hanneoberman.github.io/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>MICE</title>
-      <link>https://hanneoberman.github.io/tags/mice/</link>
+      <link>/tags/mice/</link>
     </image>
     
     <item>
+      <title>Pre-study presentation SIPS 2019</title>
+      <link>/publication/sips2019/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/sips2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Convergence Diagnostic for Multiple Imputation</title>
-      <link>https://hanneoberman.github.io/post/convergence-diagnostic-for-multiple-imputation/</link>
+      <link>/post/convergence-diagnostic-for-multiple-imputation/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>https://hanneoberman.github.io/post/convergence-diagnostic-for-multiple-imputation/</guid>
+      <guid>/post/convergence-diagnostic-for-multiple-imputation/</guid>
       <description>
 
 
@@ -49,17 +57,24 @@ imp &amp;lt;- mice(nhanes[,-1], maxit = maxit, print = F)&lt;/code&gt;&lt;/pre&g
 &lt;p&gt;The rhat_function function is the wrapper that performs all of this. Within the function, we call 4 other functions (explaination below): fold_sims(), split_chains(), z_scale(), and get.rhat().&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# show the contents of the function
 rhat_function&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## function (imp, maxit, n.var = 4) 
+&lt;pre&gt;&lt;code&gt;## function (imp, maxit, n.var = 4, moment = &amp;quot;mean&amp;quot;) 
 ## {
-##     rhat &amp;lt;- matrix(NA, nrow = 1, ncol = n.var)
+##     rhat &amp;lt;- numeric(length = n.var)
+##     names(rhat) &amp;lt;- attr(imp$chainMean, &amp;quot;dimnames&amp;quot;)[[1]]
+##     if (moment == &amp;quot;mean&amp;quot;) {
+##         sims &amp;lt;- imp$chainMean
+##     }
+##     else if (moment == &amp;quot;variance&amp;quot;) {
+##         sims &amp;lt;- imp$chainVar
+##     }
 ##     for (v in 1:n.var) {
-##         rhat_bulk &amp;lt;- imp$chainMean[v, , ] %&amp;gt;% split_chains() %&amp;gt;% 
+##         rhat_bulk &amp;lt;- sims[v, , ] %&amp;gt;% split_chains() %&amp;gt;% z_scale() %&amp;gt;% 
+##             get.rhat(maxit = maxit)
+##         rhat_tail &amp;lt;- sims[v, , ] %&amp;gt;% fold_sims() %&amp;gt;% split_chains() %&amp;gt;% 
 ##             z_scale() %&amp;gt;% get.rhat(maxit = maxit)
-##         rhat_tail &amp;lt;- imp$chainMean[v, , ] %&amp;gt;% fold_sims() %&amp;gt;% 
-##             split_chains() %&amp;gt;% z_scale() %&amp;gt;% get.rhat(maxit = maxit)
 ##         rhat[v] &amp;lt;- max(rhat_bulk, rhat_tail)
 ##     }
-##     max(rhat)
+##     return(rhat)
 ## }&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The first function inside rhat_function is split_chains(). This ‘chops’ the chains in two, to assess trending within chains.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# show the contents of the function
@@ -127,7 +142,8 @@ get.rhat&lt;/code&gt;&lt;/pre&gt;
 &lt;h1&gt;Step 3: Apply these functions to get &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; values&lt;/h1&gt;
 &lt;p&gt;Now we know what’s happening, let’s apply it.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rhat_function(imp, maxit, n.var = n.var)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 1.068033&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      bmi      hyp      chl 
+## 1.101684 1.058439 1.155748&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This &lt;span class=&#34;math inline&#34;&gt;\(\widehat{R}\)&lt;/span&gt; value is nice and high, but I also got values below one. Which is theoretically impossible.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;so-my-question-to-you-is-how-is-it-possible-that-we-can-obtain-widehatr-values-1&#34; class=&#34;section level1&#34;&gt;
@@ -138,9 +154,9 @@ get.rhat&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>ShinyMICE</title>
-      <link>https://hanneoberman.github.io/project/external-project/</link>
+      <link>/project/external-project/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>https://hanneoberman.github.io/project/external-project/</guid>
+      <guid>/project/external-project/</guid>
       <description></description>
     </item>
     
