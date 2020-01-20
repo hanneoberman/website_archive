@@ -5,20 +5,12 @@
     <link>/categories/msc-thesis/</link>
       <atom:link href="/categories/msc-thesis/index.xml" rel="self" type="application/rss+xml" />
     <description>MSc Thesis</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 13 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>MSc Thesis</title>
       <link>/categories/msc-thesis/</link>
     </image>
-    
-    <item>
-      <title>Pre-study presentation SIPS 2019</title>
-      <link>/publication/sips2019/</link>
-      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/sips2019/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Convergence Diagnostic for Multiple Imputation</title>

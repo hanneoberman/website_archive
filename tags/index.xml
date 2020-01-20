@@ -5,36 +5,12 @@
     <link>/tags/</link>
       <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 13 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Tags</title>
       <link>/tags/</link>
     </image>
-    
-    <item>
-      <title>MICE</title>
-      <link>/tags/mice/</link>
-      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/tags/mice/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Poster</title>
-      <link>/tags/poster/</link>
-      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/tags/poster/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ShinyMICE</title>
-      <link>/tags/shinymice/</link>
-      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/tags/shinymice/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Convergence</title>
@@ -45,10 +21,26 @@
     </item>
     
     <item>
+      <title>MICE</title>
+      <link>/tags/mice/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/mice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>MLaRP</title>
       <link>/tags/mlarp/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
       <guid>/tags/mlarp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ShinyMICE</title>
+      <link>/tags/shinymice/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/shinymice/</guid>
       <description></description>
     </item>
     

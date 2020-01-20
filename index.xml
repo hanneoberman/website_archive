@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Hanne Oberman</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 13 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 13 Jan 2020 10:53:00 +0100</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Hanne Oberman</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Pre-study presentation SIPS 2019</title>
       <link>/publication/sips2019/</link>
-      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Jan 2020 10:53:00 +0100</pubDate>
       <guid>/publication/sips2019/</guid>
       <description></description>
     </item>
