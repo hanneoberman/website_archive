@@ -29,7 +29,7 @@
     
   
   <meta name="description" content="A list of things I found on the internet and thought to be useful.
-reduce whitespace in printed lists# create a listalist &lt;- list(a=1,b=2,c=list(d=1:3, e=&quot;hello&quot;))# regular printalist## $a## [1] 1## ## $b## [1] 2## ## $c## $c$d## [1] 1 2 3## ## $c$e## [1] &quot;hello&quot;# shorter printprint.simple.list(alist)## _ ## a 1 ## b 2 ## c.">
+Reduce whitespace in printed lists# create a listalist &lt;- list(a=1,b=2,c=list(d=1:3, e=&quot;hello&quot;))# regular printalist## $a## [1] 1## ## $b## [1] 2## ## $c## $c$d## [1] 1 2 3## ## $c$e## [1] &quot;hello&quot;# shorter printprint.simple.list(alist)## _ ## a 1 ## b 2 ## c.">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/twitter-treasures/">
@@ -120,7 +120,7 @@
   <meta property="og:url" content="/post/twitter-treasures/">
   <meta property="og:title" content="Twitter treasures #rstats | Hanne Oberman">
   <meta property="og:description" content="A list of things I found on the internet and thought to be useful.
-reduce whitespace in printed lists# create a listalist &lt;- list(a=1,b=2,c=list(d=1:3, e=&quot;hello&quot;))# regular printalist## $a## [1] 1## ## $b## [1] 2## ## $c## $c$d## [1] 1 2 3## ## $c$e## [1] &quot;hello&quot;# shorter printprint.simple.list(alist)## _ ## a 1 ## b 2 ## c."><meta property="og:image" content="/img/icon-192.png">
+Reduce whitespace in printed lists# create a listalist &lt;- list(a=1,b=2,c=list(d=1:3, e=&quot;hello&quot;))# regular printalist## $a## [1] 1## ## $b## [1] 2## ## $c## $c$d## [1] 1 2 3## ## $c$e## [1] &quot;hello&quot;# shorter printprint.simple.list(alist)## _ ## a 1 ## b 2 ## c."><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -172,7 +172,7 @@
       "url": "/img/icon-512.png"
     }
   },
-  "description": "A list of things I found on the internet and thought to be useful.\n\rreduce whitespace in printed lists\r\r# create a list\ralist \u0026lt;- list(a=1,b=2,c=list(d=1:3, e=\u0026quot;hello\u0026quot;))\r# regular print\ralist\r## $a\r## [1] 1\r## ## $b\r## [1] 2\r## ## $c\r## $c$d\r## [1] 1 2 3\r## ## $c$e\r## [1] \u0026quot;hello\u0026quot;\r# shorter print\rprint.simple.list(alist)\r## _ ## a 1 ## b 2 ## c."
+  "description": "A list of things I found on the internet and thought to be useful.\nReduce whitespace in printed lists\r# create a list\ralist \u0026lt;- list(a=1,b=2,c=list(d=1:3, e=\u0026quot;hello\u0026quot;))\r# regular print\ralist\r## $a\r## [1] 1\r## ## $b\r## [1] 2\r## ## $c\r## $c$d\r## [1] 1 2 3\r## ## $c$e\r## [1] \u0026quot;hello\u0026quot;\r# shorter print\rprint.simple.list(alist)\r## _ ## a 1 ## b 2 ## c."
 }
 </script>
 
@@ -532,9 +532,8 @@
 
 
 <p>A list of things I found on the internet and thought to be useful.</p>
-<ul>
-<li>reduce whitespace in printed lists</li>
-</ul>
+<div id="reduce-whitespace-in-printed-lists" class="section level3">
+<h3>Reduce whitespace in printed lists</h3>
 <pre class="r"><code># create a list
 alist &lt;- list(a=1,b=2,c=list(d=1:3, e=&quot;hello&quot;))
 # regular print
@@ -561,9 +560,9 @@ print.simple.list(alist)</code></pre>
 ## c.d3 3    
 ## c.e  hello</code></pre>
 <p>Source: <a href="https://twitter.com/coolbutuseless/status/1259972282421739522?s=20" class="uri">https://twitter.com/coolbutuseless/status/1259972282421739522?s=20</a></p>
-<ul>
-<li>rename columns <em>inside</em> <code>dyplyr::select()</code> call</li>
-</ul>
+</div>
+<div id="rename-columns-inside-dyplyrselect-call" class="section level3">
+<h3>Rename columns <em>inside</em> <code>dyplyr::select()</code> call</h3>
 <pre class="r"><code>library(dplyr)
 mtcars %&gt;% 
   # select some variables *and* rename one
@@ -576,9 +575,9 @@ mtcars %&gt;%
 ## $ cyl          &lt;dbl&gt; 6, 6, 4, 6, 8, 6, 8, 4, 4, 6, 6, 8, 8, 8, 8, 8, 8, 4, ...
 ## $ displacement &lt;dbl&gt; 160.0, 160.0, 108.0, 258.0, 360.0, 225.0, 360.0, 146.7...</code></pre>
 <p>Source: <a href="https://twitter.com/n_a_gilbert/status/1259866258708840452?s=20" class="uri">https://twitter.com/n_a_gilbert/status/1259866258708840452?s=20</a></p>
-<ul>
-<li>comment out any step in a pipeline</li>
-</ul>
+</div>
+<div id="comment-out-any-step-in-a-pipeline" class="section level3">
+<h3>Comment out any step in a pipeline</h3>
 <pre class="r"><code>mtcars %&gt;% 
   # perform some wrangling
   filter(cyl &gt; 4) %&gt;% 
@@ -603,22 +602,22 @@ mtcars %&gt;%
 ## 10  17.3     8  276.   180  3.07  3.73  17.6     0     0     3     3
 ## # ... with 11 more rows</code></pre>
 <p>Source: <a href="https://twitter.com/thomas_neitmann/status/1260111985968119808?s=20" class="uri">https://twitter.com/thomas_neitmann/status/1260111985968119808?s=20</a></p>
-<ul>
-<li>rename objects/variables/etc. within one <code>R</code> chunck only</li>
-</ul>
+</div>
+<div id="rename-objectsvariablesetc.-within-one-r-chunck-only" class="section level3">
+<h3>Rename objects/variables/etc. within one <code>R</code> chunck only</h3>
 <pre><code>Ctrl + Alt + Shift + M</code></pre>
 <p>Source: <a href="https://twitter.com/sergiouribe/status/1251446686255329283?s=20" class="uri">https://twitter.com/sergiouribe/status/1251446686255329283?s=20</a></p>
-<ul>
-<li>select text vertically (e.g., <code>geom_line()</code> to <code>geom_point()</code>)</li>
-</ul>
+</div>
+<div id="select-text-vertically-e.g.-geom_line-to-geom_point" class="section level3">
+<h3>Select text vertically (e.g., <code>geom_line()</code> to <code>geom_point()</code>)</h3>
 <pre><code>Alt + cursor</code></pre>
-<ul>
-<li>auto-format <code>R</code> script/chunk</li>
-</ul>
+</div>
+<div id="auto-format-r-scriptchunk" class="section level3">
+<h3>Auto-format <code>R</code> script/chunk</h3>
 <pre><code>Ctrl + Shift + A</code></pre>
-<ul>
-<li>round to nearest tenth, hundred, etc.</li>
-</ul>
+</div>
+<div id="round-to-nearest-tenth-hundred-etc." class="section level3">
+<h3>Round to nearest tenth, hundred, etc.</h3>
 <pre class="r"><code>round(
   # some vector
   c(1, 5, 6, 90, 11, 27, pi),
@@ -626,9 +625,9 @@ mtcars %&gt;%
   digits = -1)</code></pre>
 <pre><code>## [1]  0  0 10 90 10 30  0</code></pre>
 <p>Source: <a href="https://twitter.com/_ColinFay/status/1250706532762861569?s=20" class="uri">https://twitter.com/_ColinFay/status/1250706532762861569?s=20</a></p>
-<ul>
-<li>apply function to columns of dataframe</li>
-</ul>
+</div>
+<div id="apply-function-to-columns-of-dataframe" class="section level3">
+<h3>Apply function to columns of dataframe</h3>
 <pre class="r"><code>library(magrittr)
 # expose contents
 mtcars %$% lm(mpg ~ disp + hp)</code></pre>
@@ -639,9 +638,9 @@ mtcars %$% lm(mpg ~ disp + hp)</code></pre>
 ## Coefficients:
 ## (Intercept)         disp           hp  
 ##    30.73590     -0.03035     -0.02484</code></pre>
-<ul>
-<li>rename columns in dataframe at the end of a pipeline</li>
-</ul>
+</div>
+<div id="rename-columns-in-dataframe-at-the-end-of-a-pipeline" class="section level3">
+<h3>Rename columns in dataframe at the end of a pipeline</h3>
 <pre class="r"><code>mtcars %&gt;% 
   # some wrangling
   filter(cyl &gt; 4) %&gt;% 
@@ -669,16 +668,16 @@ mtcars %$% lm(mpg ~ disp + hp)</code></pre>
 ## 19 15.8 8 351.0 264 4.22 3.170 14.50 0 1  5  4
 ## 20 19.7 6 145.0 175 3.62 2.770 15.50 0 1  5  6
 ## 21 15.0 8 301.0 335 3.54 3.570 14.60 0 1  5  8</code></pre>
-<ul>
-<li>print variable names <em>cleanly</em> (i.e., comma separated and without quote marks)</li>
-</ul>
+</div>
+<div id="print-variable-names-cleanly-i.e.-comma-separated-and-without-quote-marks" class="section level3">
+<h3>Print variable names <em>cleanly</em> (i.e., comma separated and without quote marks)</h3>
 <pre class="r"><code># print just the names
 paste(colnames(mtcars), collapse = &quot;, &quot;) </code></pre>
 <pre><code>## [1] &quot;mpg, cyl, disp, hp, drat, wt, qsec, vs, am, gear, carb&quot;</code></pre>
 <p>Source: <a href="https://twitter.com/ludmila_janda/status/1217486240058134528?s=20" class="uri">https://twitter.com/ludmila_janda/status/1217486240058134528?s=20</a></p>
-<ul>
-<li>save output of <code>R</code> script/chunk</li>
-</ul>
+</div>
+<div id="save-output-of-r-scriptchunk" class="section level3">
+<h3>Save output of <code>R</code> script/chunk</h3>
 <pre class="r"><code># define output file, specify whether to add to existing output
 sink(file=&quot;output.txt&quot;, append = FALSE)
 # run some code
@@ -700,14 +699,16 @@ mtcars %&gt;%
 <pre class="r"><code># save output
 sink()</code></pre>
 <p>Source: <a href="https://twitter.com/olivier_klein/status/1203347039133802497?s=20" class="uri">https://twitter.com/olivier_klein/status/1203347039133802497?s=20</a></p>
-<ul>
-<li>turn off scientific notation (e.g., <code>5.3e-2</code> to <code>0.053</code>)</li>
-</ul>
+</div>
+<div id="turn-off-scientific-notation-e.g.-5.3e-2-to-0.053" class="section level3">
+<h3>Turn off scientific notation (e.g., <code>5.3e-2</code> to <code>0.053</code>)</h3>
 <pre class="r"><code>options(scipen = 999)</code></pre>
 <p>Source: <a href="https://twitter.com/edwardhkennedy/status/1188206942017196032?s=20" class="uri">https://twitter.com/edwardhkennedy/status/1188206942017196032?s=20</a></p>
-<ul>
-<li>list of datasets in <code>R</code>: <a href="https://vincentarelbundock.github.io/Rdatasets/datasets.html" class="uri">https://vincentarelbundock.github.io/Rdatasets/datasets.html</a></li>
-</ul>
+</div>
+<div id="list-of-datasets-in-r" class="section level3">
+<h3>List of datasets in <code>R</code></h3>
+<p>Source: <a href="https://vincentarelbundock.github.io/Rdatasets/datasets.html" class="uri">https://vincentarelbundock.github.io/Rdatasets/datasets.html</a></p>
+</div>
 
     </div>
 
