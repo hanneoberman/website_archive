@@ -3,12 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/publication_types/1/</loc>
-    <lastmod>2020-01-13T10:53:00+01:00</lastmod>
+    <loc>/categories/</loc>
+    <lastmod>2020-05-14T17:19:09+02:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
+    <lastmod>2020-05-14T17:19:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/miscellaneous/</loc>
+    <lastmod>2020-05-14T17:19:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-05-14T17:19:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2020-05-14T17:19:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/rstats/</loc>
+    <lastmod>2020-05-14T17:19:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-05-14T17:19:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/twitter-treasures/</loc>
+    <lastmod>2020-05-14T17:19:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/1/</loc>
     <lastmod>2020-01-13T10:53:00+01:00</lastmod>
   </url>
   
@@ -29,11 +64,6 @@
   
   <url>
     <loc>/post/convergence-diagnostic-for-multiple-imputation/</loc>
-    <lastmod>2019-11-15T16:01:41+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
     <lastmod>2019-11-15T16:01:41+01:00</lastmod>
   </url>
   
@@ -68,11 +98,6 @@
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2019-11-15T16:01:41+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/project/</loc>
     <lastmod>2019-11-15T00:00:00+00:00</lastmod>
   </url>
@@ -85,11 +110,6 @@
   <url>
     <loc>/project/external-project/</loc>
     <lastmod>2019-11-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-11-15T16:01:41+01:00</lastmod>
   </url>
   
   <url>
