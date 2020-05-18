@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications | Hanne Oberman</title>
-    <link>/publication/</link>
-      <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
-    <description>Publications</description>
+    <title>7 | Hanne Oberman</title>
+    <link>/publication_types/7/</link>
+      <atom:link href="/publication_types/7/index.xml" rel="self" type="application/rss+xml" />
+    <description>7</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 18 May 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
-      <title>Publications</title>
-      <link>/publication/</link>
+      <title>7</title>
+      <link>/publication_types/7/</link>
     </image>
     
     <item>
@@ -17,14 +17,6 @@
       <link>/publication/mscthesis/</link>
       <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
       <guid>/publication/mscthesis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pre-study presentation SIPS 2019</title>
-      <link>/publication/sips2019/</link>
-      <pubDate>Mon, 13 Jan 2020 10:53:00 +0100</pubDate>
-      <guid>/publication/sips2019/</guid>
       <description></description>
     </item>
     
