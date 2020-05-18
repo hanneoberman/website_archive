@@ -28,10 +28,11 @@
   
     
   
-  <meta name="description" content="Pre-study poster to elicit feedback on my thesis project from SIPS attendees.">
+  <meta name="description" content="This file describes how convergence diagnostic \(\widehat{R}\) is computed in the simulation study I ran for my Research Report. \(\widehat{R}\) is also called ‘potential scale reduction factor’ or ‘Gelman-Rubin statistic’. It tells us how much the variance of an estimate could be shrunken down if we would have run infinitely many iterations.
+Step 1: Impute some dataIt’s easiest to show how \(\widehat{R}\) is computed by applying it on a simple example.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/publication/sips2019/">
+  <link rel="alternate" hreflang="en-us" href="/post/thesis/convergence-diagnostic-for-multiple-imputation/">
 
   
 
@@ -100,30 +101,32 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/publication/sips2019/">
+  <link rel="canonical" href="/post/thesis/convergence-diagnostic-for-multiple-imputation/">
 
   
   
   
   
     
+    
   
   
-  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:card" content="summary">
   
   <meta property="twitter:site" content="@hioberman">
   <meta property="twitter:creator" content="@hioberman">
   
   <meta property="og:site_name" content="Hanne Oberman">
-  <meta property="og:url" content="/publication/sips2019/">
-  <meta property="og:title" content="Pre-study presentation SIPS 2019 | Hanne Oberman">
-  <meta property="og:description" content="Pre-study poster to elicit feedback on my thesis project from SIPS attendees."><meta property="og:image" content="/publication/sips2019/featured.png">
-  <meta property="twitter:image" content="/publication/sips2019/featured.png"><meta property="og:locale" content="en-us">
+  <meta property="og:url" content="/post/thesis/convergence-diagnostic-for-multiple-imputation/">
+  <meta property="og:title" content="Convergence Diagnostic for Multiple Imputation | Hanne Oberman">
+  <meta property="og:description" content="This file describes how convergence diagnostic \(\widehat{R}\) is computed in the simulation study I ran for my Research Report. \(\widehat{R}\) is also called ‘potential scale reduction factor’ or ‘Gelman-Rubin statistic’. It tells us how much the variance of an estimate could be shrunken down if we would have run infinitely many iterations.
+Step 1: Impute some dataIt’s easiest to show how \(\widehat{R}\) is computed by applying it on a simple example."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-01-13T10:53:00&#43;01:00">
+      <meta property="article:published_time" content="2019-11-15T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-01-13T10:53:00&#43;01:00">
+    <meta property="article:modified_time" content="2019-11-15T16:01:41&#43;01:00">
   
 
   
@@ -135,6 +138,8 @@
 
 
 
+
+  
 
 
 
@@ -144,19 +149,15 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "/publication/sips2019/"
+    "@id": "/post/thesis/convergence-diagnostic-for-multiple-imputation/"
   },
-  "headline": "Pre-study presentation SIPS 2019",
+  "headline": "Convergence Diagnostic for Multiple Imputation",
   
-  "image": [
-    "/publication/sips2019/featured.png"
-  ],
-  
-  "datePublished": "2020-01-13T10:53:00+01:00",
-  "dateModified": "2020-01-13T10:53:00+01:00",
+  "datePublished": "2019-11-15T00:00:00Z",
+  "dateModified": "2019-11-15T16:01:41+01:00",
   
   "author": {
     "@type": "Person",
@@ -171,7 +172,7 @@
       "url": "/img/icon-512.png"
     }
   },
-  "description": "Pre-study poster to elicit feedback on my thesis project from SIPS attendees."
+  "description": "This file describes how convergence diagnostic \\(\\widehat{R}\\) is computed in the simulation study I ran for my Research Report. \\(\\widehat{R}\\) is also called ‘potential scale reduction factor’ or ‘Gelman-Rubin statistic’. It tells us how much the variance of an estimate could be shrunken down if we would have run infinitely many iterations.\nStep 1: Impute some data\rIt’s easiest to show how \\(\\widehat{R}\\) is computed by applying it on a simple example."
 }
 </script>
 
@@ -189,7 +190,7 @@
 
 
 
-  <title>Pre-study presentation SIPS 2019 | Hanne Oberman</title>
+  <title>Convergence Diagnostic for Multiple Imputation | Hanne Oberman</title>
 
 </head>
 
@@ -436,7 +437,7 @@
 </nav>
 
 
-  <div class="pub">
+  <article class="article">
 
   
 
@@ -451,26 +452,18 @@
 
 
 
-
-
-
-
-
-
-
+  
 
   
+  
+  
+<div class="article-container pt-3">
+  <h1>Convergence Diagnostic for Multiple Imputation</h1>
+
+  
+
   
     
-  
-
-
-<div class="article-container pt-3">
-  <h1>Pre-study presentation SIPS 2019</h1>
-
-  
-
-  
 
 
 <div class="article-metadata">
@@ -483,58 +476,41 @@
     
     
       
+          Last updated on
+      
     
-    January 2020
+    Nov 15, 2019
   </span>
   
 
   
 
   
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
 
   
   
   
 
   
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/msc-thesis/">MSc Thesis</a></span>
   
 
 </div>
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="btn-links mb-3">
-  
-  
-
-
-
-
-
-
-
-
-  
     
-  
 
 
 
-<a class="btn btn-outline-primary my-1 mr-1" href="https://osf.io/rz3mg/" target="_blank" rel="noopener">
-  PDF
-</a>
+
+
 
 
 
@@ -545,87 +521,155 @@
 
 
   
-  
-    
-  
-<a class="btn btn-outline-primary my-1 mr-1" href="https://twitter.com/hioberman/status/1148565905737244672?s=20" target="_blank" rel="noopener">
-  Poster
-</a>
-
-
-
-
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 1018px;">
-  <div style="position: relative">
-    <img src="/publication/sips2019/featured_hubfeb5eb53349fbe19a77e5fc731057a0_512971_720x0_resize_lanczos_2.png" alt="" class="featured-image">
-    <span class="article-header-caption">Poster</span>
-  </div>
 </div>
 
 
 
   <div class="article-container">
 
-    
-    <h3>Abstract</h3>
-    <p class="pub-abstract">TEST How can we improve missing data handling? I have yet to come across an un-wrangled data set that dóésn&rsquo;t contain missing cells. Of course you could just ignore the problem and apply list-wise deletion, but that decreases power and can bias results. As Master&rsquo;s thesis project I will develop an evaluation suite (R Shiny) to assess missingness and multiple imputated data sets (R package &lsquo;MICE&rsquo;). Before starting in september, I would love your feedback on what aspects I should not overlook, great examples of other evaluation suites (like ShinyStan), and what would improve your trust in multiple imputations! For more information, see work by Stef van Buuren (free e-book: stefvanbuuren.name/fimd/) and Gerko Vink.</p>
-    
+    <div class="article-style">
+      
 
-    
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
-        <div class="row">
-          <div class="col-12 col-md-3 pub-row-heading">Type</div>
-          <div class="col-12 col-md-9">
-            
-            
-            <a href="/publication/#1">
-              Conference paper
-            </a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="col-md-1"></div>
+
+<p>This file describes how convergence diagnostic <span class="math inline">\(\widehat{R}\)</span> is computed in the simulation study I ran for my Research Report. <span class="math inline">\(\widehat{R}\)</span> is also called ‘potential scale reduction factor’ or ‘Gelman-Rubin statistic’. It tells us how much the variance of an estimate could be shrunken down if we would have run infinitely many iterations.</p>
+<div id="step-1-impute-some-data" class="section level1">
+<h1>Step 1: Impute some data</h1>
+<p>It’s easiest to show how <span class="math inline">\(\widehat{R}\)</span> is computed by applying it on a simple example. Load the nhanes data and impute the variables with missingness.</p>
+<pre class="r"><code># load required packages/functions
+library(magrittr)
+library(mice)</code></pre>
+<pre><code>## Loading required package: lattice</code></pre>
+<pre><code>## 
+## Attaching package: &#39;mice&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     cbind, rbind</code></pre>
+<pre class="r"><code>source(&quot;C:/Users/User/Desktop/shinyMice/Simulation/Functions/Convergence.R&quot;)
+source(&quot;C:/Users/User/Desktop/shinyMice/Simulation/Functions/Convergence_supplement.R&quot;)
+
+# set parameters
+maxit &lt;- 10
+n.var &lt;- 3 
+
+# run imputation
+imp &lt;- mice(nhanes[,-1], maxit = maxit, print = F)</code></pre>
+</div>
+<div id="step-2-evaluate-the-functions-to-use" class="section level1">
+<h1>Step 2: Evaluate the functions to use</h1>
+<p>We are going to compute <span class="math inline">\(\widehat{R}\)</span> values per imputed variable. As recommended by Vehtari et al. (2019), we compute split-half, rank-normalized <span class="math inline">\(\widehat{R}\)</span> values for the bulk and the tails of the distribution. For the latter, we need to fold the imputation chains before splitting them in half and rank-normalizing them. Then, <span class="math inline">\(\widehat{R}\)</span> is computed for both (bulk and tails). The highest of these two <span class="math inline">\(\widehat{R}\)</span> values is extracted. This is performed for each of the imputed variables, and only the maximum <span class="math inline">\(\widehat{R}\)</span> value across variables is reported.</p>
+<p>The rhat_function function is the wrapper that performs all of this. Within the function, we call 4 other functions (explaination below): fold_sims(), split_chains(), z_scale(), and get.rhat().</p>
+<pre class="r"><code># show the contents of the function
+rhat_function</code></pre>
+<pre><code>## function (imp, maxit, n.var = 4, moment = &quot;mean&quot;) 
+## {
+##     rhat &lt;- numeric(length = n.var)
+##     names(rhat) &lt;- attr(imp$chainMean, &quot;dimnames&quot;)[[1]]
+##     if (moment == &quot;mean&quot;) {
+##         sims &lt;- imp$chainMean
+##     }
+##     else if (moment == &quot;variance&quot;) {
+##         sims &lt;- imp$chainVar
+##     }
+##     for (v in 1:n.var) {
+##         rhat_bulk &lt;- sims[v, , ] %&gt;% split_chains() %&gt;% z_scale() %&gt;% 
+##             get.rhat(maxit = maxit)
+##         rhat_tail &lt;- sims[v, , ] %&gt;% fold_sims() %&gt;% split_chains() %&gt;% 
+##             z_scale() %&gt;% get.rhat(maxit = maxit)
+##         rhat[v] &lt;- max(rhat_bulk, rhat_tail)
+##     }
+##     return(rhat)
+## }</code></pre>
+<p>The first function inside rhat_function is split_chains(). This ‘chops’ the chains in two, to assess trending within chains.</p>
+<pre class="r"><code># show the contents of the function
+split_chains</code></pre>
+<pre><code>## function (sims) 
+## {
+##     niter &lt;- dim(sims)[1]
+##     if (niter &lt; 4) 
+##         return(sims)
+##     half &lt;- niter/2
+##     cbind(sims[1:floor(half), ], sims[ceiling(half + 1):niter, 
+##         ])
+## }</code></pre>
+<p>Then the halved chains are rank-normalized.</p>
+<pre class="r"><code># show the contents of the function
+z_scale</code></pre>
+<pre><code>## function (x) 
+## {
+##     S &lt;- length(x)
+##     r &lt;- rank(x, ties.method = &quot;average&quot;)
+##     z &lt;- qnorm((r - 1/2)/S)
+##     if (!is.null(dim(x))) {
+##         z &lt;- array(z, dim = dim(x), dimnames = dimnames(x))
+##     }
+##     z
+## }</code></pre>
+<p>To detect non-convergence in the tails, <span class="math inline">\(\widehat{R}\)</span> is also computed on the folded chains (which are also split and rank-normalized).</p>
+<pre class="r"><code># show the contents of the function
+fold_sims</code></pre>
+<pre><code>## function (sims) 
+## {
+##     abs(sims - median(sims))
+## }</code></pre>
+<p>Only then do we get to the actual <span class="math inline">\(\widehat{R}\)</span> function. In the get.rhat function, the following equations are applied:</p>
+<p>"In the equations below, <span class="math inline">\(N\)</span> is the number of draws per chain, <span class="math inline">\(M\)</span> is the number of chains, and <span class="math inline">\(S = MN\)</span> is the total number of draws from all chains. For each scalar summary of interest <span class="math inline">\(\theta\)</span>, we compute <span class="math inline">\(B\)</span> and <span class="math inline">\(W\)</span>, the between- and within-chain variances:</p>
+<p><span class="math display">\[\begin{align*}
+B =\frac{N}{M-1} \sum_{m=1}^{M}\left(\bar{\theta}^{(\cdot m)}-\bar{\theta}^{(\cdot \cdot)}\right)^{2}, 
+\text { where } \bar{\theta}^{(\cdot m)}=\frac{1}{N} \sum_{n=1}^{N} \theta^{(n m)}, 
+\text { and } \bar{\theta}^{(\cdot \cdot)}=\frac{1}{M} \sum_{m=1}^{M} \bar{\theta}^{(\cdot m)} \\
+W =\frac{1}{M} \sum_{m=1}^{M} s_{j}^{2}, 
+\text { where } s_{m}^{2}=\frac{1}{N-1} \sum_{n=1}^{N}\left(\theta^{(n m)}-\bar{\theta}^{(\cdot m)}\right)^{2}&quot;. 
+\text{ Vehtari et al., 2019, p. 5} 
+\end{align*}\]</span></p>
+<p>The between and within chain variances are computed from the chain means of the mids object, that underwent the previous transformations (folding, splitting, rank-normalizing). The average of the chain means per imputation <span class="math inline">\(m\)</span> is <span class="math inline">\(\bar{\theta}^{(\cdot m)}\)</span>. The average of these <span class="math inline">\(m\)</span> values is <span class="math inline">\(\bar{\theta}^{(\cdot \cdot)}\)</span>. <span class="math inline">\(N\)</span> is the number of iterations (‘maxit’). So we compute <span class="math inline">\(B\)</span> as <code>maxit * var(apply(sims, 2, mean))</code>. And <span class="math inline">\(W\)</span> is computed as <code>mean(apply(sims, 2, var))</code>.</p>
+<p>To get <span class="math inline">\(\widehat{R}\)</span> we need to compute the weighted average of <span class="math inline">\(B\)</span> and <span class="math inline">\(W\)</span>, <span class="math inline">\(\widehat{\operatorname{var}}^{+}\)</span>, and evaluate this against the within chain variance W. The weighted average is is computed as follows:</p>
+<p><span class="math display">\[\begin{equation*}
+\widehat{\operatorname{var}}^{+}(\theta | y)=\frac{N-1}{N} W+\frac{1}{N} B,
+\end{equation*}\]</span></p>
+<p>Then finally, potential scale reduction factor <span class="math inline">\(\widehat{R}\)</span> is obtained as:</p>
+<p><span class="math display">\[\begin{equation*}
+\widehat{R}=\sqrt{\frac{\widehat{\operatorname{var}}^{+}(\theta | y)}{W}}.
+\end{equation*}\]</span></p>
+<p><span class="math inline">\(\widehat{R}\)</span> is computed for each variable with the function ‘get.rhat()’.</p>
+<pre class="r"><code># show the contents of the function
+get.rhat</code></pre>
+<pre><code>## function (sims, maxit = maxit) 
+## {
+##     var_between &lt;- maxit * var(apply(sims, 2, mean))
+##     var_within &lt;- mean(apply(sims, 2, var))
+##     rhat &lt;- sqrt((var_between/var_within + maxit - 1)/maxit)
+##     return(rhat)
+## }</code></pre>
+</div>
+<div id="step-3-apply-these-functions-to-get-widehatr-values" class="section level1">
+<h1>Step 3: Apply these functions to get <span class="math inline">\(\widehat{R}\)</span> values</h1>
+<p>Now we know what’s happening, let’s apply it.</p>
+<pre class="r"><code>rhat_function(imp, maxit, n.var = n.var)</code></pre>
+<pre><code>##      bmi      hyp      chl 
+## 1.101684 1.058439 1.155748</code></pre>
+<p>This <span class="math inline">\(\widehat{R}\)</span> value is nice and high, but I also got values below one. Which is theoretically impossible.</p>
+</div>
+<div id="so-my-question-to-you-is-how-is-it-possible-that-we-can-obtain-widehatr-values-1" class="section level1">
+<h1>So my question to you is: How is it possible that we can obtain <span class="math inline">\(\widehat{R}\)</span> values &lt; 1?</h1>
+</div>
+
     </div>
-    <div class="d-md-none space-below"></div>
-    
-
-    
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
-        <div class="row">
-          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-          <div class="col-12 col-md-9">ShinyMICE: Developing a Missing Data Evaluation Suite (Master’s Thesis Methodology and Statistics)</div>
-        </div>
-      </div>
-      <div class="col-md-1"></div>
-    </div>
-    <div class="d-md-none space-below"></div>
-    
-
-    <div class="space-below"></div>
-
-    <div class="article-style"></div>
 
     
 
 
 
 
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/convergence/">Convergence</a>
+  
+  <a class="badge badge-light" href="/tags/mice/">MICE</a>
+  
+  <a class="badge badge-light" href="/tags/shinymice/">ShinyMICE</a>
+  
+</div>
 
 
 
@@ -640,7 +684,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/publication/sips2019/&amp;text=Pre-study%20presentation%20SIPS%202019" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/post/thesis/convergence-diagnostic-for-multiple-imputation/&amp;text=Convergence%20Diagnostic%20for%20Multiple%20Imputation" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -653,7 +697,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/publication/sips2019/&amp;t=Pre-study%20presentation%20SIPS%202019" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/post/thesis/convergence-diagnostic-for-multiple-imputation/&amp;t=Convergence%20Diagnostic%20for%20Multiple%20Imputation" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
       </li>
@@ -666,7 +710,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Pre-study%20presentation%20SIPS%202019&amp;body=/publication/sips2019/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Convergence%20Diagnostic%20for%20Multiple%20Imputation&amp;body=/post/thesis/convergence-diagnostic-for-multiple-imputation/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -679,7 +723,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/publication/sips2019/&amp;title=Pre-study%20presentation%20SIPS%202019" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/post/thesis/convergence-diagnostic-for-multiple-imputation/&amp;title=Convergence%20Diagnostic%20for%20Multiple%20Imputation" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -692,7 +736,7 @@
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Pre-study%20presentation%20SIPS%202019%20/publication/sips2019/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Convergence%20Diagnostic%20for%20Multiple%20Imputation%20/post/thesis/convergence-diagnostic-for-multiple-imputation/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -705,7 +749,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/publication/sips2019/&amp;title=Pre-study%20presentation%20SIPS%202019" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/post/thesis/convergence-diagnostic-for-multiple-imputation/&amp;title=Convergence%20Diagnostic%20for%20Multiple%20Imputation" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -845,11 +889,20 @@
 
   
   
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/project/shinymice/">ShinyMICE</a></li>
+      
+    </ul>
+  </div>
+  
 
 
 
   </div>
-</div>
+</article>
 
       
 
