@@ -2,6 +2,9 @@
 
 A statistician interested in data visualization, interdisciplinarity, and open science. Follow me on [Twitter](https://twitter.com/hioberman) if you want to get to know me and my terrible sense of academia/programming humor.
 
+![image](https://user-images.githubusercontent.com/38891540/137960326-8e4d91ec-19b3-4b87-bcf2-666d82652900.png)
+
+
 ## Experience
 
 Currently, I'm working as a lecturer and research associate at Utrecht University's Methodology and Statistics department. 
@@ -22,4 +25,9 @@ Some examples of my work:
 
 - My MSc thesis [Missing the Point: Non-Convergence in Iterative Imputation Algorithms](https://openreview.net/pdf?id=fHSVg6mVqpw)
 
-- 
+![image](https://user-images.githubusercontent.com/38891540/137959198-2103b75d-fa2e-4298-9c91-9ec66b13a9d2.png)
+
+- My ongoing project [{shinymice}](https://hanneoberman.shinyapps.io/shinymice-demo/), an online evaluation suite for missing data (demo version). 
+
+![image](https://user-images.githubusercontent.com/38891540/137959898-b2ef2376-2d50-4061-946b-2dfeb89c97b3.png)
+
