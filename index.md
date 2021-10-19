@@ -1,10 +1,13 @@
 # Hanne Oberman, MSc
 
+Currently, I'm working as a lecturer and research associate at Utrecht University's Methodology and Statistics department. 
+
+For 50% of my appointment I get to teach and supervise students, mostly in topics related to [Applied Data Science](https://www.uu.nl/en/research/applied-data-science). The other 50% of my appointment is research time. I'm involved in the [Missing Data](https://www.uu.nl/en/organisation/methodology-and-statistics/missing-data) group led by [Stef van Buuren](https://stefvanbuuren.name/) and [Gerko Vink](https://www.gerkovink.com/), and I assist projects guided by [Thomas Debray](https://thomasdebray.be/) at the [Julius Center for Health Sciences and Primary Care](https://juliuscentrum.umcutrecht.nl/en/). 
+
+
 ## Experience
 
-Currently, I'm working as a lecturer and research associate at Utrecht University's Methodology and Statistics department. For 50% of my appointment I get to teach and supervise students, mostly in topics related to [Applied Data Science](https://www.uu.nl/en/research/applied-data-science). The other 50% of my appointment is research time. I'm involved in the [Missing Data](https://www.uu.nl/en/organisation/methodology-and-statistics/missing-data) group led by [Stef van Buuren](https://stefvanbuuren.name/) and [Gerko Vink](https://www.gerkovink.com/), and I assist projects guided by [Thomas Debray](https://thomasdebray.be/) at the [Julius Center for Health Sciences and Primary Care](https://juliuscentrum.umcutrecht.nl/en/). 
-
-If you'd like to know more about my former education, check out my [LinkedIn profile](https://www.linkedin.com/in/hanneoberman/) or [CV](https://github.com/hanneoberman/CV/blob/master/HanneObermanCV.pdf).
+If you'd like to know more about my background and education, check out my [LinkedIn profile](https://www.linkedin.com/in/hanneoberman/) or [CV](https://github.com/hanneoberman/CV/blob/master/HanneObermanCV.pdf).
 
 If you'd like to see my programming skills live in action, browse around through my [GitHub repositories](https://github.com/hanneoberman).
 
@@ -14,11 +17,11 @@ For an overview of my published work, see my [ORCiD page](https://orcid.org/0000
 
 Some examples of my work:
 
-- My ongoing project [{shinymice}](https://hanneoberman.shinyapps.io/shinymice-demo/), an online evaluation suite for missing data (demo version). 
+- Work in progress on [{shinymice}](https://hanneoberman.shinyapps.io/shinymice-demo/), an online evaluation suite for missing data. 
 
 ![](./img/hex.png)
 
-- My MSc thesis [Missing the Point: Non-Convergence in Iterative Imputation Algorithms](https://openreview.net/pdf?id=fHSVg6mVqpw).
+- My MSc thesis [Missing the Point: Non-Convergence in Iterative Imputation Algorithms](https://openreview.net/pdf?id=fHSVg6mVqpw), presented at ICML 2020 (ARTEMISS workshop).
 
 ![](./img/conv.png)
 
