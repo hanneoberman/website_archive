@@ -1,4 +1,4 @@
 theme: jekyll-theme-minimal
 title: Hanne Oberman
-description: MSc Methodology & Statistics \n test linebreak
-logo: /img/logo.png
+description: MSc Methodology & Statistics <br> test linebreak
+logo: /img/avatar.png
