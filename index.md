@@ -1,6 +1,4 @@
-# Hi, I'm Hanne!
-
-A statistician interested in data visualization, interdisciplinarity, and open science. Follow me on [Twitter](https://twitter.com/hioberman) if you want to get to know me (and my terrible sense of academia/programming humor).
+# Hanne Oberman, MSc
 
 ## Experience
 
