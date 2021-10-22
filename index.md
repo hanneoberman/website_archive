@@ -18,7 +18,7 @@ If you'd like to see my programming skills live in action, browse around through
 
 For an overview of my published work, see my [ORCiD page](https://orcid.org/0000-0003-3276-2141). Other places to find my research output are my [Utrecht University page](https://www.uu.nl/staff/HIOberman), [OSF](https://osf.io/d8c5f/), and [Google Scholar](https://scholar.google.nl/citations?user=myLQXrEAAAAJ). I post all of my ongoing work on [GitHub](https://github.com/hanneoberman). 
 
-Some examples of my work:
+Some examples of my research:
 
 - Work in progress on [{shinymice}](https://hanneoberman.shinyapps.io/shinymice-demo/), an online evaluation suite for missing data. 
 
