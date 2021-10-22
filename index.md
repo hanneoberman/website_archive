@@ -16,7 +16,7 @@ If you'd like to see my programming skills live in action, browse around through
 
 ## Research
 
-For an overview of my published work, see my [ORCiD page](https://orcid.org/0000-0003-3276-2141). I aspire to adhere to the open science principles, and post all of my ongoing work on [GitHub](https://github.com/hanneoberman). Other places to find my research output are my [Utrecht University page](https://www.uu.nl/staff/HIOberman) and [Google Scholar](https://scholar.google.nl/citations?user=myLQXrEAAAAJ).
+For an overview of my published work, see my [ORCiD page](https://orcid.org/0000-0003-3276-2141). I post all of my ongoing work on [GitHub](https://github.com/hanneoberman). Other places to find my research output are my [Utrecht University page](https://www.uu.nl/staff/HIOberman), [OSF](https://osf.io/d8c5f/), and [Google Scholar](https://scholar.google.nl/citations?user=myLQXrEAAAAJ).
 
 Some examples of my work:
 
