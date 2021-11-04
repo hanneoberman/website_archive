@@ -1,4 +1,4 @@
-# Hanne Oberman, MSc
+# Hanne I. Oberman, MSc
 
 Currently, I'm working as a lecturer and research associate at Utrecht University's [Methodology and Statistics department](https://www.uu.nl/en/organisation/methodology-and-statistics). 
 
