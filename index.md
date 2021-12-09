@@ -1,8 +1,14 @@
 ---
+theme: jekyll-theme-minimal
+title: Hi, I'm Hanne!  <br>
+description: /bio.txt
+logo: /img/avatar.png
+auto_ids: true
 output: 
   html_document: 
-    css: www/style.css
+    css: www/styles.css
 ---
+
 <div class="topnav">
   <a href="https://hanneoberman.github.io/presentations">Presentations</a>
   <a href="https://hanneoberman.github.io/publications">Publications</a>
