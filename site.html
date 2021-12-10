@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+<link rel="stylesheet" href="www/style.css">
+</head>
+<body>
+
+<!-- The sidebar -->
+<div class="sidebar">
+  <center>
+    <h1> Hi, I'm Hanne! </h1>
+    <img src="img/avatar.png" alt="profile picture" style="width:90%;">
+    <br><br>
+    <h3>Statistician, interdisciplinarian, dataviz enthusiast.</h2>
+    <br><br> 
+    </center>
+    <i class="fa fa-twitter-square" aria-hidden="true"></i> <a href="https://twitter.com/hioberman"> @hioberman</a> 
+    <br><br>
+    <i class="fab fa-orcid"></i> <a content="https://orcid.org/0000-0003-3276-2141" href="https://orcid.org/0000-0003-3276-2141" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;">ORCiD:0000-0003-3276-2141</a>
+    <br><br>
+    <i class="fa fa-github" aria-hidden="true"></i> <a href="https://github.com/hanneoberman"> hanneoberman</a> 
+    <br><br>
+    <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:h.i.oberman@uu.nl" style="vertical-align:top;">h.i.oberman@uu.nl</a> 
+  
+</div>
+
+<!-- Page content -->
+<div class="content">
+
+<!-- The nav bar -->
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="https://hanneoberman.github.io/publications/">Publications</a>
+  <a href="https://hanneoberman.github.io/presentations/">Presentations</a>
+  <a href="">CV</a>
+  <a href="javascript:void(0);" class="icon" onclick="includeNavbar()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<!-- The actual content -->
+<div style="padding-left:16px">
+<br>
+<div w3-include-html="content/home.html"></div>
+</body>
+
+<script src="www/script.js"></script>
+
+<script>
+includeHTML();
+</script>
+
+</html>

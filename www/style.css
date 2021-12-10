@@ -5,13 +5,12 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #267CB9;
+  background-color: #ffb854;
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -20,11 +19,10 @@ body {
 
 .topnav a:hover {
   background-color: #ddd;
-  color: #114061;
 }
 
 .topnav a.active {
-  background-color: #114061;
+  background-color: #727272;
   color: white;
 }
 
@@ -63,15 +61,15 @@ body {
   position: fixed;
   height: 100%;
   overflow: auto;
-  color: #114061;
+  color: 727272;
 }
 
 .sidebar a {
-  color: #267CB9;
+  color: #727272;
 }
 
 .sidebar a:hover {
-  color: #114061;
+  color: #000000;
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
@@ -79,13 +77,24 @@ div.content {
   margin-left: 360px;
   padding: 1px 16px;
   height: 1000px;
-  color: #114061;
+  color: #727272;
 }
 
 .content a {
-  color: #114061;
+  color: #727272;
 }
 
+.content a:hover {
+  color: #000000;
+}
+
+.content h1 {
+  color: #000000;
+}
+
+.content h2 {
+  color: #000000;
+}
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
   .sidebar {
